@@ -32,7 +32,7 @@ fi
 # if RUN_NPM_BUILD is not empty and set to true, run npm run build
 if [ -n "${RUN_NPM_BUILD}" ] && [ "${RUN_NPM_BUILD}" = "true" ]; then
     echo "run: npm run build"
-     if [ -z "${WORKING_DIRECTORY}" ]; then
+    if [ -z "${WORKING_DIRECTORY}" ]; then
         npm run build --prefix ${WORKING_DIRECTORY}
     else
         npm run build
