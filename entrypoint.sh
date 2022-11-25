@@ -20,8 +20,9 @@ if [ -z "${DEPLOY_ONLY}" ]; then
     echo "DEPLOY_ONLY is missing"
     DEPLOY_ONLY = "functions"
 fi
-echo "Working directory:"
+echo "Dir:"
 pwd
+ls -la
 
 # if RUN_NPM_CI is not empty and set to true, run npm ci
 if [ -n "${RUN_NPM_CI}" ] && [ "${RUN_NPM_CI}" = "true" ]; then
