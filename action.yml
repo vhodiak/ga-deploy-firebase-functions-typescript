@@ -1,0 +1,9 @@
+name: "Deploy to Firebase Functions with targets using node v16"
+author: "Adu Williams <vh@otakoyi.com>, Volodymyr Hodiak "
+description: "A GitHub Action to deploy to Firebase Functions modified to allow production or development deployment"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "cloud"
+  color: "red"
