@@ -22,21 +22,14 @@ ls -la
 # if RUN_NPM_CI is not empty and set to true, run npm ci
 if [ -n "${RUN_NPM_CI}" ] && [ "${RUN_NPM_CI}" = "true" ]; then
     echo "run: npm ci"
-    if [ -z "${WORKING_DIRECTORY}" ]; then
-        npm ci --prefix ${WORKING_DIRECTORY}
-    else
-        npm ci
-    fi
+    npm ci --prefix ${WORKING_DIRECTORY}
+    
 fi
 
 # if RUN_NPM_BUILD is not empty and set to true, run npm run build
 if [ -n "${RUN_NPM_BUILD}" ] && [ "${RUN_NPM_BUILD}" = "true" ]; then
     echo "run: npm run build"
-    if [ -z "${WORKING_DIRECTORY}" ]; then
-        npm run build --prefix ${WORKING_DIRECTORY}
-    else
-        npm run build
-    fi
+    npm run build --prefix ${WORKING_DIRECTORY}
 fi
 
 echo "result"
